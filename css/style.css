@@ -1,0 +1,32 @@
+body {
+  backgroung: #fff;
+  color: #362f2d;
+}
+/*header*/
+.header {
+  background: #f26d7d;
+  height: 50px;
+}
+/*columns*/
+.columns {
+
+}
+/*content*/
+.content {
+  background: rgba(255, 0, 0, .1);
+  min-height: 200px;
+}
+/*sidebar*/
+.sidebar {
+  background: rgba(0, 255, 0, .1);
+  min-height: 200px;
+}
+/*footer*/
+.footer {
+  background: #f8b6be;
+  height: 85px;
+}
+
+@media screen and (min-width: 769px) {
+  
+}
