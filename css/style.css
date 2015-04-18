@@ -1,7 +1,28 @@
+/*body*/
 body {
   backgroung: #fff;
   color: #362f2d;
 }
+
+/*wrapper*/
+.wrapper {
+}
+
+/*commmon elements*/
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
 /*header*/
 .header {
   background: #f26d7d;
@@ -27,6 +48,47 @@ body {
   height: 85px;
 }
 
-@media screen and (min-width: 769px) {
-  
+@media screen and (min-width: 978px) {
+
+  /*body*/
+  body {
+    background: #fcfbf8;
+  }
+
+    /*wrapper*/
+    .wrapper {
+    margin: 0 auto;
+    width: 978px;
+  }
+
+  /*site header*/
+  .header {
+    background: none;
+    height: 195px;
+  }
+
+  /*columns*/
+  .columns {
+    background: #fff;
+    padding: 30px;
+  }
+  /*main content*/
+  .content {
+    float:left;
+    width: 602px;
+  }
+
+  /* main sidebar*/
+  .sidebar {
+    float: right;
+    width: 286px;
+  }
+
+  /*footer*/
+  .footer {
+    /*background: none;*/
+    height: 55px;
+    margin: 30px 0;
+  }
+
 }
