@@ -41,11 +41,14 @@ body {
   height: 50px;
   margin: 0 auto;
   overflow: hidden;
+  position: relative;
   text-indent: 100%;
+  z-index: 100;
   white-space: nowrap;
   width: 250px;
 }
 .phone {
+  background: #fff;
   border: 1px solid #f26d7d;
   border-radius: 10px;
   font-size: 90%;
@@ -56,16 +59,50 @@ body {
 }
 .phone a {
   color: #007236;
+  position: relative;
   text-decoration: none;
+  z-index: 100;
 }
-
 .menu {
-  /*dev*/background: rgba(0, 0, 255, .1);
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.menu .toggle {
+  /*dev*/background: rgba(0, 0, 255, .5);
   height: 50px;
   position: absolute;
   right: 0;
   top: 0;
   width: 50px;
+}
+#nav:target .menu ul {
+  display: block;
+  margin-top: 125px;
+}
+.menu .close {
+  display: none;
+}
+#nav:target .menu .close {
+  display: block;
+}
+#nav:target .header {
+  background: #f26d7d;
+}
+.menu ul {
+  display: none;
+  padding: 0;
+  margin: 0;
+}
+.menu li {
+  background: #f26d7d;
+  list-style: none;
+}
+.menu a {
+  display: block;
+  font-size: 24px;
+  color: #fff;
+  text-decoration: none;
 }
 .facebook {
   display: none;
@@ -143,6 +180,24 @@ body {
     /*dev*/min-width: 200px;
     position: static;
     width: auto;
+  }
+  .menu .toggle {
+    display: none;
+  }
+  .menu ul {
+    display: block;
+  }
+  #nav:target .menu .close {
+    display: none;
+  }
+  #nav:target .menu ul {
+    margin: 0;
+  }
+  #nav:target .header {
+    background: none;
+  }
+  .menu li {
+  float: left;
   }
   .facebook {
     /*dev*/background: rgba(255, 0, 255, 0.2);
